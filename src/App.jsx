@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
 import ProductList from './pages/ProductList';
-import CartPage from './pages/CartPage';
+import CartItem from './pages/CartItem';        // ← CAMBIADO: ahora importa CartItem
 import AboutUs from './components/AboutUs';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/products" element={<ProductList />} />
-        <Route path="/cart" element={<CartPage />} />
+        <Route path="/cart" element={<CartItem />} />    {/* ← CAMBIADO: usa CartItem */}
       </Routes>
     </Router>
   );
@@ -20,7 +20,7 @@ function LandingPage() {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate('/products'); // Navega a la página de productos
+    navigate('/products');
   };
 
   return (
@@ -39,4 +39,5 @@ function LandingPage() {
   );
 }
 
+export default App;
 export default App;
