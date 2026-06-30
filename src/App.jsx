@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
 import './App.css';
 import ProductList from './pages/ProductList';
 import CartPage from './pages/CartPage';
@@ -17,20 +17,27 @@ function App() {
 }
 
 function LandingPage() {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/products');
+  };
+
   return (
     <div className="landing-container">
       <div className="overlay">
-        <h1 style={{ fontSize: '3rem', marginBottom: '0.5rem' }}>🌿 Paradise Nursery</h1>
+        <h1>🌿 Welcome to Paradise Nursery</h1>
         <p style={{ fontSize: '1.2rem' }}>
           Transforma tu hogar en un paraíso verde con nuestras plantas de interior.
         </p>
         <AboutUs />
-        <Link to="/products" className="cta-button">
+        <button className="cta-button" onClick={handleGetStarted}>
           🌱 Comenzar
-        </Link>
+        </button>
       </div>
     </div>
   );
 }
 
+export default App;
 export default App;
