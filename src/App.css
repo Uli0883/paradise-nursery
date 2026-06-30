@@ -1,0 +1,37 @@
+.landing-container {
+  min-height: 100vh;
+  background-image: url('/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  max-width: 700px;
+  backdrop-filter: blur(4px);
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 2.5rem;
+  background-color: #27ae60;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #219a52;
+  transform: scale(1.05);
+}
