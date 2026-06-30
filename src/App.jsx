@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
 import ProductList from './pages/ProductList';
 import CartPage from './pages/CartPage';
@@ -20,7 +20,7 @@ function LandingPage() {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate('/products');
+    navigate('/products'); // Navega a la página de productos
   };
 
   return (
@@ -39,5 +39,4 @@ function LandingPage() {
   );
 }
 
-export default App;
 export default App;
